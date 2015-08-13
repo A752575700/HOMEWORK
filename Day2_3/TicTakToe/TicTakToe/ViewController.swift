@@ -35,70 +35,100 @@ class ViewController: UIViewController {
     
     
     var situation = [0,0,0,0,0,0,0,0,0]
+    func clean(){
+        Box1Outlet.setTitle(" ", forState: UIControlState.Normal)
+        Box2Outlet.setTitle(" ", forState: UIControlState.Normal)
+        Box3Outlet.setTitle(" ", forState: UIControlState.Normal)
+        Box4Outlet.setTitle(" ", forState: UIControlState.Normal)
+        Box5Outlet.setTitle(" ", forState: UIControlState.Normal)
+        Box6Outlet.setTitle(" ", forState: UIControlState.Normal)
+        Box7Outlet.setTitle(" ", forState: UIControlState.Normal)
+        Box8Outlet.setTitle(" ", forState: UIControlState.Normal)
+        Box9Outlet.setTitle(" ", forState: UIControlState.Normal)
+        situation = [0,0,0,0,0,0,0,0,0]
+        times = 0
+    }
+    
     func testwinner (){
             if (situation[0] == 1 && situation[1] == 1 && situation[2] == 1)
             {
                 Outcome.text = "player 1 won"
+                clean()
             }
             else if(situation[3] == 1 && situation[4] == 1 && situation[5] == 1)
             {
                 Outcome.text = "player 1 won"
+                clean()
             }
             else if(situation[6] == 1 && situation[7] == 1 && situation[8] == 1)
             {
                 Outcome.text = "player 1 won"
+                clean()
             }
             else if(situation[0] == 1 && situation[3] == 1 && situation[6] == 1)
             {
                 Outcome.text = "player 1 won"
+                clean()
             }
             else if(situation[1] == 1 && situation[4] == 1 && situation[7] == 1)
             {
-                    Outcome.text = "player 1 won"
+                Outcome.text = "player 1 won"
+                clean()
             }
             else if(situation[2] == 1 && situation[5] == 1 && situation[8] == 1)
             {
-                    Outcome.text = "player 1 won"
+                Outcome.text = "player 1 won"
+                clean()
             }
             else if(situation[0] == 1 && situation[4] == 1 && situation[8] == 1)
             {
                 Outcome.text = "player 1 won"
+                clean()
             }
             else if(situation[2] == 1 && situation[4] == 1 && situation[6] == 1)
             {
-            Outcome.text = "player 1 won"
+                Outcome.text = "player 1 won"
+                clean()
             }
             else if(situation[0] == 2 && situation[1] == 2 && situation[2] == 2)
             {
                 Outcome.text = "player 2 won"
+                clean()
             }
             else if(situation[3] == 2 && situation[4] == 2 && situation[5] == 2)
             {
                 Outcome.text = "player 2 won"
+                clean()
             }
             else if(situation[6] == 2 && situation[7] == 2 && situation[8] == 2)
             {
                 Outcome.text = "player 2 won"
+                clean()
             }
             else if(situation[0] == 2 && situation[3] == 2 && situation[6] == 2)
             {
-                    Outcome.text = "player 2 won"
+                Outcome.text = "player 2 won"
+                clean()
             }
             else if(situation[1] == 2 && situation[4] == 2 && situation[7] == 2)
             {
                 Outcome.text = "player 2 won"
+                clean()
             }
             else if(situation[2] == 2 && situation[5] == 2 && situation[8] == 2)
             {
                 Outcome.text = "player 2 won"
+                clean()
             }
             else if(situation[0] == 2 && situation[4] == 2 && situation[8] == 2)
             {
                 Outcome.text = "player 2 won"
+                clean()
             }
             else if(situation[2] == 2 && situation[4] == 2 && situation[6] == 2)
             {
-            Outcome.text = "player 2 won"
+                Outcome.text = "player 2 won"
+                clean()
             }
 
     
@@ -116,7 +146,7 @@ class ViewController: UIViewController {
             Box1Outlet.setTitle("O", forState: UIControlState.Normal)
             situation[0] = 1
             }
-        testwinner()
+        //testwinner()
         //控件的一种状态
     }
 
@@ -154,7 +184,7 @@ class ViewController: UIViewController {
             Box4Outlet.setTitle("O", forState: UIControlState.Normal)
             situation[3] = 1
         }
-        testwinner()
+        //testwinner()
     }
     @IBAction func Box5Action(sender: UIButton) {
         times = times + 1
