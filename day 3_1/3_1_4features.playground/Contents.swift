@@ -12,7 +12,7 @@ public class dog {
         
     }
     //旺财和小黑不一样的 旺财.color vs black.color不同
-    //public v.s. private
+    //public v.s. private:无法保护（重载变internal）
     public var color: String
     var isPreg: Bool
     
