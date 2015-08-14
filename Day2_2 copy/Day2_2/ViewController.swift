@@ -17,8 +17,6 @@ class ViewController: UIViewController
     
     var notes = [note]()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -90,8 +88,9 @@ class ViewController: UIViewController
             if segue.identifier == "showDetail"{
                 var noteDetailController = segue.destinationViewController as! TableViewController2_notesDetail
                 //a object , as 转换
-                
+
                 var index = self.TableView.indexPathForSelectedRow()?.row
+                
                 noteDetailController.passNote = notes[index!]
             }else{
                 
@@ -103,12 +102,14 @@ class ViewController: UIViewController
     
     
     //interface builder
+    //是放在目标file内，在来源的界面拖到“exit”
     @IBAction func unwindSegue(segue:UIStoryboardSegue){
+        self.performSegueWithIdentifier("showDetail", sender: nil)
         
     }
 
     
-    
+
     
     
     

@@ -15,6 +15,7 @@
 		3FB430101B7B02A300CAE67C /* Day2_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4300F1B7B02A300CAE67C /* Day2_2Tests.swift */; };
 		3FB430481B7C7CC200CAE67C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB430471B7C7CC200CAE67C /* Note.swift */; };
 		3FB4304A1B7C82A000CAE67C /* TableViewController2_notesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB430491B7C82A000CAE67C /* TableViewController2_notesDetail.swift */; };
+		3FB4304C1B7D855500CAE67C /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB4304B1B7D855500CAE67C /* AddTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		3FB4300F1B7B02A300CAE67C /* Day2_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2_2Tests.swift; sourceTree = "<group>"; };
 		3FB430471B7C7CC200CAE67C /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		3FB430491B7C82A000CAE67C /* TableViewController2_notesDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController2_notesDetail.swift; sourceTree = "<group>"; };
+		3FB4304B1B7D855500CAE67C /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				3FB42FF91B7B02A300CAE67C /* AppDelegate.swift */,
 				3FB42FFB1B7B02A300CAE67C /* ViewController.swift */,
 				3FB42FFD1B7B02A300CAE67C /* Main.storyboard */,
+				3FB4304B1B7D855500CAE67C /* AddTableViewController.swift */,
 				3FB430491B7C82A000CAE67C /* TableViewController2_notesDetail.swift */,
 				3FB430471B7C7CC200CAE67C /* Note.swift */,
 				3FB430001B7B02A300CAE67C /* Images.xcassets */,
@@ -222,6 +225,7 @@
 				3FB4304A1B7C82A000CAE67C /* TableViewController2_notesDetail.swift in Sources */,
 				3FB42FFA1B7B02A300CAE67C /* AppDelegate.swift in Sources */,
 				3FB430481B7C7CC200CAE67C /* Note.swift in Sources */,
+				3FB4304C1B7D855500CAE67C /* AddTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
