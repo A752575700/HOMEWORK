@@ -34,10 +34,17 @@
                                     <action selector="SearchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIS-lz-xwh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcP-zk-K2v">
+                                <rect key="frame" x="78" y="265" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="ResultLabel" destination="kcP-zk-K2v" id="Fe2-UF-lMP"/>
                         <outlet property="SearchOutline" destination="itY-XW-1Ze" id="c2z-ng-Jpz"/>
                         <outlet property="TextFieldOutline" destination="qtS-Sq-KtP" id="ga5-2Z-f2T"/>
                     </connections>

@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var ResultLabel: UILabel!
     
     @IBOutlet weak var TextFieldOutline: UITextField!
 
@@ -44,7 +45,9 @@ class ViewController: UIViewController {
         req.HTTPMethod = "GET"
         req.addValue("35a3ce0261634a931633d96eb8e58d78", forHTTPHeaderField: "apikey")
         NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue()) {
+            //闭包 closure
             (response, data, error) -> Void in
+            //下面的都是内容 用来解析
             let res = response as! NSHTTPURLResponse
             println(res.statusCode)
             if let e = error{
@@ -52,7 +55,10 @@ class ViewController: UIViewController {
             }
             if let d = data {
                 var content = NSString(data: d, encoding: NSUTF8StringEncoding)
-                content
+                ////////////////????????????
+                var jsonobject = NSJSONSerialization.JSONObjectWithData(d, options: NSJSONReadingOptions.AllowFragments, error: nil) as! NSDictionary
+                var retDictionary = jsonobject["retData"] as! NSDictionary
+                self.ResultLabel.text = retDictionary["weather"] as! String
                 println(content)
             }
         }

@@ -35,8 +35,13 @@ class GameScene: SKScene {
             sprite.position = location
             
             let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:10)
+            let action2 = SKAction.fadeOutWithDuration(10)
+            let actionmix = SKAction.group([action, action2])
             
-            sprite.runAction(SKAction.repeatActionForever(action))
+            //SKAction  动作
+            
+            sprite.runAction(actionmix)
+            //SKAction.repeatAction
             
             self.addChild(sprite)
         }
