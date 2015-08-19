@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class AddTableViewController: UITableViewController {
 
@@ -46,12 +47,7 @@ class AddTableViewController: UITableViewController {
 //        return 0
 //    }
     
-    @IBAction func Done(sender: UIBarButtonItem) {
-        
-        var ViewViewController = ViewController()
 
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
 
@@ -64,12 +60,21 @@ class AddTableViewController: UITableViewController {
             ListController.notes.append(NewNote)
 
             ListController.TableView.reloadData()
+        
+        var detailNote = PFObject(className:"Tips")
+        detailNote["title"] = titletitle.text
+        detailNote["Description"] = Description.text
+        
+        detailNote.saveInBackgroundWithBlock { (bool:Bool, error:NSError?) -> Void in
+            println("save successfully")
+        }
+
     }
-    
+
     
 
     
-    
+
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -116,14 +121,13 @@ class AddTableViewController: UITableViewController {
     }
     */
 
-    /*
+ 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+  //   In a storyboard-based application, you will often want to do a little preparation before navigation
+
+
+
+
 
 }

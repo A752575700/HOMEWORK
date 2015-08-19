@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 
 
@@ -25,9 +26,22 @@ class ViewController: UIViewController
         var note2 =  note(title: "坐公交", Description: "daxigua")
         
         var note3 =  note(title: "去超市", Description: "daxigua")
+        
+        var query = PFQuery(className: "Tips")
+        var result = query.findObjects()
+        
+        for i in result! {
+            var title = i["title"] as! String
+            var des = i["Description"] as! String
+            var particularnote = note(title: title, Description: des)
+            notes.append(particularnote)
+        }
+        
         notes.append(note1)
         notes.append(note2)
         notes.append(note3)
+        //self.navigationController?.navigationBar.barTintColor = UIColor.emeraldColor()
+
         
     }
 
@@ -104,7 +118,7 @@ class ViewController: UIViewController
     //interface builder
     //是放在目标file内，在来源的界面拖到“exit”
     @IBAction func unwindSegue(segue:UIStoryboardSegue){
-        self.performSegueWithIdentifier("showDetail", sender: nil)
+      
         
     }
 
